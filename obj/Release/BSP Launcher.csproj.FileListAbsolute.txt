@@ -1,0 +1,11 @@
+E:\projects\BSP Launcher\BSP Launcher\bin\Release\BSP Launcher.exe.config
+E:\projects\BSP Launcher\BSP Launcher\bin\Release\BSP Launcher.exe
+E:\projects\BSP Launcher\BSP Launcher\bin\Release\BSP Launcher.pdb
+E:\projects\BSP Launcher\BSP Launcher\obj\Release\BSP Launcher.csproj.AssemblyReference.cache
+E:\projects\BSP Launcher\BSP Launcher\obj\Release\BSP_Launcher.error.resources
+E:\projects\BSP Launcher\BSP Launcher\obj\Release\BSP_Launcher.Form1.resources
+E:\projects\BSP Launcher\BSP Launcher\obj\Release\BSP_Launcher.Properties.Resources.resources
+E:\projects\BSP Launcher\BSP Launcher\obj\Release\BSP Launcher.csproj.GenerateResource.cache
+E:\projects\BSP Launcher\BSP Launcher\obj\Release\BSP Launcher.csproj.CoreCompileInputs.cache
+E:\projects\BSP Launcher\BSP Launcher\obj\Release\BSP Launcher.exe
+E:\projects\BSP Launcher\BSP Launcher\obj\Release\BSP Launcher.pdb
