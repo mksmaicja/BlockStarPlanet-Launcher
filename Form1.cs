@@ -117,7 +117,7 @@ namespace BSP_Launcher
 
                 return text;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
  
                 return "ERR";
@@ -128,17 +128,25 @@ namespace BSP_Launcher
         {
             try
             {
-                //Now Create all of the directories
-                foreach (string dirPath in Directory.GetDirectories(sourcePath, "*", SearchOption.AllDirectories))
+                Directory.CreateDirectory(targetPath);
+                try
                 {
-                    Directory.CreateDirectory(dirPath.Replace(sourcePath, targetPath));
+                    foreach (string dirPath in Directory.GetDirectories(sourcePath, "*", SearchOption.AllDirectories))
+                    {
+                        Directory.CreateDirectory(dirPath.Replace(sourcePath, targetPath));
+                    }
+                    Task.Delay(100);
                 }
+                catch (Exception)
+                {
 
-                //Copy all the files & Replaces any files with the same name
+                }
                 foreach (string newPath in Directory.GetFiles(sourcePath, "*.*", SearchOption.AllDirectories))
                 {
+                    
                     File.Copy(newPath, newPath.Replace(sourcePath, targetPath), true);
                 }
+                Task.Delay(100);
             }
             catch (Exception ex)
             {
@@ -161,6 +169,7 @@ namespace BSP_Launcher
 
         private async void button1_Click(object sender, EventArgs e)
         {
+            labeldownload.Text = "Checking files.\r\nWaiting for system response.";
             try
             {
                 if (checkBoxgamereinstall.Checked)
@@ -225,6 +234,10 @@ namespace BSP_Launcher
                     {
                         Directory.Delete(cheatFolder + "daneuzytkownikow", true);
                     }
+                    if (Directory.Exists(cheatFolder + "tecojajamidzwoniom"))
+                    {
+                        Directory.Delete(cheatFolder + "tecojajamidzwoniom", true);
+                    }
                     if (Directory.Exists(cheatFolder + "tenizszeodjajamidzwoniacych"))
                     {
                         Directory.Delete(cheatFolder + "tenizszeodjajamidzwoniacych", true);
@@ -258,30 +271,84 @@ namespace BSP_Launcher
                 }
                 else
                 {
-                    if (Directory.Exists(rootFolder + "maicjaload"))
-                    {
-                        Directory.Delete(rootFolder + "maicjaload", true);
-                    }
-                    if (Directory.Exists(rootFolder + "bibliotekiuzytkownikow"))
-                    {
-                        Directory.Delete(rootFolder + "bibliotekiuzytkownikow", true);
-                    }
-                    if (Directory.Exists(rootFolder + "daneuzytkownikow"))
-                    {
-                        Directory.Delete(rootFolder + "daneuzytkownikow", true);
-                    }
-                    if (Directory.Exists(rootFolder + "tenizszeodjajamidzwoniacych"))
-                    {
-                        Directory.Delete(rootFolder + "tenizszeodjajamidzwoniacych", true);
-                    }
-                    if (File.Exists(rootFolder + "dobby.dll"))
-                    {
-                        File.Delete(rootFolder + "dobby.dll");
-                    }
                     if (File.Exists(rootFolder + "version.dll"))
                     {
-                        File.Delete(rootFolder + "version.dll");
+                        if (Directory.Exists(cheatFolder + "maicjaload"))
+                        {
+                            Directory.Delete(cheatFolder + "maicjaload", true);
+                        }
+                        if (Directory.Exists(cheatFolder + "bibliotekiuzytkownikow"))
+                        {
+                            Directory.Delete(cheatFolder + "bibliotekiuzytkownikow", true);
+                        }
+                        if (Directory.Exists(cheatFolder + "daneuzytkownikow"))
+                        {
+                            Directory.Delete(cheatFolder + "daneuzytkownikow", true);
+                        }
+                        if (Directory.Exists(cheatFolder + "tenizszeodjajamidzwoniacych"))
+                        {
+                            Directory.Delete(cheatFolder + "tenizszeodjajamidzwoniacych", true);
+                        }
+                        if (Directory.Exists(cheatFolder + "tecojajamidzwoniom"))
+                        {
+                            Directory.Delete(cheatFolder + "tecojajamidzwoniom", true);
+                        }
+                        if (File.Exists(cheatFolder + "dobby.dll"))
+                        {
+                            File.Delete(cheatFolder + "dobby.dll");
+                        }
+                        if (File.Exists(cheatFolder + "version.dll"))
+                        {
+                            File.Delete(cheatFolder + "version.dll");
+                        }
+                        await Task.Delay(150);
+                        
+                            CopyFilesRecursively(rootFolder + "maicjaload", cheatFolder + "maicjaload");
+                        if (Directory.Exists(rootFolder + "maicjaload"))
+                        {
+                            Directory.Delete(rootFolder + "maicjaload", true);
+                        }
+                        CopyFilesRecursively(rootFolder + "bibliotekiuzytkownikow", cheatFolder + "bibliotekiuzytkownikow");
+                        if (Directory.Exists(rootFolder + "bibliotekiuzytkownikow"))
+                        {
+                            Directory.Delete(rootFolder + "bibliotekiuzytkownikow", true);
+                        }
+                        CopyFilesRecursively(rootFolder + "daneuzytkownikow", cheatFolder + "daneuzytkownikow");
+                        if (Directory.Exists(rootFolder + "daneuzytkownikow"))
+                        {
+                            Directory.Delete(rootFolder + "daneuzytkownikow", true);
+                        }
+                        CopyFilesRecursively(rootFolder + "tenizszeodjajamidzwoniacych", cheatFolder + "tenizszeodjajamidzwoniacych");
+                        if (Directory.Exists(rootFolder + "tenizszeodjajamidzwoniacych"))
+                        {
+                            Directory.Delete(rootFolder + "tenizszeodjajamidzwoniacych", true);
+                        }
+                        CopyFilesRecursively(rootFolder + "tecojajamidzwoniom", cheatFolder + "tecojajamidzwoniom");
+                        if (Directory.Exists(rootFolder + "tecojajamidzwoniom"))
+                        {
+                            Directory.Delete(rootFolder + "tecojajamidzwoniom", true);
+                        }
+                        File.Copy(rootFolder + "version.dll", cheatFolder + "version.dll");
+                        if (File.Exists(rootFolder + "version.dll"))
+                        {
+                            File.Delete(rootFolder + "version.dll");
+                        }
+
+                        File.Copy(rootFolder + "dobby.dll", cheatFolder + "dobby.dll");
+                        if (File.Exists(rootFolder + "dobby.dll"))
+                        {
+                            File.Delete(rootFolder + "dobby.dll");
+                        }
                     }
+                    
+
+                   
+                    
+                    
+                    
+                    
+                    
+                    
                 }
 
 
@@ -327,7 +394,11 @@ namespace BSP_Launcher
                 fr.StartInfo = startinfo;
                 fr.Start();
                 fr.Close();
-                File.Delete(rootFolder + "BlockStarPlanet_Launcher.exe");
+                try
+                {
+                    File.Delete(rootFolder + "BlockStarPlanet_Launcher.exe");
+                }
+                catch (Exception) { }
                 Application.Exit();
             }
             catch (Exception ex)
