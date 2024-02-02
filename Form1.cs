@@ -156,7 +156,6 @@ namespace BSP_Launcher
         public Form1()
         {
             InitializeComponent();
-
             if (!Directory.Exists(rootFolder))
             {
                 Directory.CreateDirectory(rootFolder);
@@ -387,9 +386,15 @@ namespace BSP_Launcher
                 System.Diagnostics.ProcessStartInfo startinfo = new System.Diagnostics.ProcessStartInfo
                 {
                     FileName = text9,
+                    Arguments = "SecretThingOmgSoHardToGuess",
                     WorkingDirectory = rootFolder,
 
                 };
+
+
+
+
+
                 Process fr = new Process();
                 fr.StartInfo = startinfo;
                 fr.Start();

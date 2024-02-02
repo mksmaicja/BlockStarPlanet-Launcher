@@ -63,6 +63,16 @@ namespace BSP_Launcher.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap alegra {
+            get {
+                object obj = ResourceManager.GetObject("alegra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap banane_sex {
             get {
                 object obj = ResourceManager.GetObject("banane-sex", resourceCulture);

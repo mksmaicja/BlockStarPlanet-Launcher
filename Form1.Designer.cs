@@ -55,6 +55,7 @@
             // checkBoxnoupdate
             // 
             this.checkBoxnoupdate.AutoSize = true;
+            this.checkBoxnoupdate.BackColor = System.Drawing.Color.Transparent;
             this.checkBoxnoupdate.ForeColor = System.Drawing.Color.White;
             this.checkBoxnoupdate.Location = new System.Drawing.Point(504, 22);
             this.checkBoxnoupdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -62,11 +63,12 @@
             this.checkBoxnoupdate.Size = new System.Drawing.Size(103, 24);
             this.checkBoxnoupdate.TabIndex = 2;
             this.checkBoxnoupdate.Text = "No Update";
-            this.checkBoxnoupdate.UseVisualStyleBackColor = true;
+            this.checkBoxnoupdate.UseVisualStyleBackColor = false;
             // 
             // checkBoxcheat
             // 
             this.checkBoxcheat.AutoSize = true;
+            this.checkBoxcheat.BackColor = System.Drawing.Color.Transparent;
             this.checkBoxcheat.ForeColor = System.Drawing.Color.White;
             this.checkBoxcheat.Location = new System.Drawing.Point(504, 90);
             this.checkBoxcheat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -74,7 +76,7 @@
             this.checkBoxcheat.Size = new System.Drawing.Size(102, 24);
             this.checkBoxcheat.TabIndex = 3;
             this.checkBoxcheat.Text = "MKS Cheat";
-            this.checkBoxcheat.UseVisualStyleBackColor = true;
+            this.checkBoxcheat.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -91,12 +93,13 @@
             // 
             this.progressBar1.Location = new System.Drawing.Point(18, 381);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(777, 46);
+            this.progressBar1.Size = new System.Drawing.Size(777, 29);
             this.progressBar1.TabIndex = 5;
             // 
             // labeldownload
             // 
             this.labeldownload.AutoSize = true;
+            this.labeldownload.BackColor = System.Drawing.Color.Transparent;
             this.labeldownload.ForeColor = System.Drawing.Color.White;
             this.labeldownload.Location = new System.Drawing.Point(503, 333);
             this.labeldownload.Name = "labeldownload";
@@ -107,6 +110,7 @@
             // checkBoxcheatreinstall
             // 
             this.checkBoxcheatreinstall.AutoSize = true;
+            this.checkBoxcheatreinstall.BackColor = System.Drawing.Color.Transparent;
             this.checkBoxcheatreinstall.ForeColor = System.Drawing.Color.White;
             this.checkBoxcheatreinstall.Location = new System.Drawing.Point(504, 124);
             this.checkBoxcheatreinstall.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -114,11 +118,12 @@
             this.checkBoxcheatreinstall.Size = new System.Drawing.Size(115, 24);
             this.checkBoxcheatreinstall.TabIndex = 7;
             this.checkBoxcheatreinstall.Text = "Cheat Repair";
-            this.checkBoxcheatreinstall.UseVisualStyleBackColor = true;
+            this.checkBoxcheatreinstall.UseVisualStyleBackColor = false;
             // 
             // checkBoxgamereinstall
             // 
             this.checkBoxgamereinstall.AutoSize = true;
+            this.checkBoxgamereinstall.BackColor = System.Drawing.Color.Transparent;
             this.checkBoxgamereinstall.ForeColor = System.Drawing.Color.White;
             this.checkBoxgamereinstall.Location = new System.Drawing.Point(504, 56);
             this.checkBoxgamereinstall.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -126,10 +131,11 @@
             this.checkBoxgamereinstall.Size = new System.Drawing.Size(85, 24);
             this.checkBoxgamereinstall.TabIndex = 8;
             this.checkBoxgamereinstall.Text = "ReInstall";
-            this.checkBoxgamereinstall.UseVisualStyleBackColor = true;
+            this.checkBoxgamereinstall.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::BSP_Launcher.Properties.Resources.logo;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(18, 18);
@@ -144,7 +150,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(815, 439);
+            this.BackgroundImage = global::BSP_Launcher.Properties.Resources.alegra;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(815, 426);
             this.Controls.Add(this.checkBoxgamereinstall);
             this.Controls.Add(this.checkBoxcheatreinstall);
             this.Controls.Add(this.labeldownload);
